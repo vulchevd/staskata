@@ -236,3 +236,21 @@ img {
   height: auto;
   display: block;
 }
+.apartments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.background-container {
+  background: url('images/background.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .background-container {
+    background-attachment: scroll; /* Fix for iOS */
+  }
+}
